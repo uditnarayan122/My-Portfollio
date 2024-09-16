@@ -42,6 +42,23 @@ section {
     opacity: 0;
     animation: slideRight 1s ease forwards;
 }
+/* Default Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#header.dark-mode, #footer.dark-mode {
+    background-color: #333;
+}
+
+/* Add more dark mode styles for other sections as needed */
 
 #navbar {
     margin-right: 10px;
@@ -75,6 +92,21 @@ section {
     cursor: pointer;
     box-shadow: 0 0 25px yellowgreen, 0 0 25px yellowgreen;
 }
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 40px; /* Adjust the size of the icon */
+}
+
+#theme-icon {
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover #theme-icon {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
 
 /* Section: Home */
 #home {

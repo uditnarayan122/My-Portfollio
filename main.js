@@ -35,3 +35,35 @@ var typed=new Typed('.text',{
     backDelay:1500,
     loop:true
 });
+// Get the toggle button element
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+// Default to dark mode and set the moon icon 🌙
+document.body.classList.add('dark-mode');
+themeToggleBtn.textContent = '🌙';
+
+// Toggle dark and light mode on button click
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    let theme = 'light-mode'; // Default to light mode when toggled
+
+    if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark-mode';
+        themeToggleBtn.textContent = '🌙'; // Moon icon for dark mode
+    } else {
+        themeToggleBtn.textContent = '🌞'; // Sun icon for light mode
+    }
+
+    // Save the selected theme in localStorage
+    localStorage.setItem('theme', theme);
+});
+
+// Apply saved theme from localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.body.classList.remove('dark-mode', 'light-mode');
+    document.body.classList.add(savedTheme);
+    themeToggleBtn.textContent = savedTheme === 'dark-mode' ? '🌙' : '🌞';
+}
+
+
