@@ -1,0 +1,2333 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ededed;
+    background: black;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header */
+#header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: black;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 10px 10px 10px black;
+}
+
+#logo {
+    position: relative;
+    padding-left: 10px;
+    font-size: 32px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+#navbar {
+    margin-right: 10px;
+}
+
+#navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+#navbar a:hover,
+#navbar a.active {
+    color: yellowgreen;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+#header .logo:hover {
+    cursor: pointer;
+    box-shadow: 0 0 25px yellowgreen, 0 0 25px yellowgreen;
+}
+
+/* Section: Home */
+#home {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+#home-content {
+    max-width: 600px;
+}
+
+#home-content h3 {
+    color: aliceblue;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+#home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+#home-content h3 span {
+    color: yellowgreen;
+}
+
+#home-content h1 {
+    color: aliceblue;
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+#home-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 30px 15px 30px 0;
+    background: transparent;
+    border: 2px solid yellowgreen;
+    border-radius: 50%;
+    font-size: 20px;
+    color: yellowgreen;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+#home-icons a:hover {
+    background: yellowgreen;
+    color: black;
+    box-shadow: 0 0 20px yellowgreen;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 1000;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px yellowgreen,
+        0 0 25px yellowgreen;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 25px yellowgreen, 0 0 25px yellowgreen;
+}
+
+#profile-img {
+    display: inline-flex;
+    width: 500px;
+    height: 500px;
+}
+
+
+
+/* Section: About */
+#about {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#about-img img {
+    margin-left: 100px;
+    height: 500px;
+    width: 500px;
+}
+
+
+#about-text h2 {
+    padding-top: 40px;
+    color: aliceblue;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#about-text h2 span {
+    color: yellowgreen;
+}
+
+#about-text p {
+    padding-top: 1rem;
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
+}
+
+.container {
+    width: 100%;
+    padding: 70px 150px;
+}
+
+/* Section: Qualifications */
+#qualifications h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#qualifications h1 span {
+    color: yellowgreen;
+}
+
+#qualifications-list {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+#qualifications-list div {
+    display: grid;
+    background: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+
+#qualifications-list div h2 {
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#qualifications-list div h4 {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#qualifications-list div p {
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+#qualifications-list div a {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+
+    text-decoration: none;
+    color: yellowgreen;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+#qualifications-list div:hover {
+    transform: scale(1.1);
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: yellowgreen;
+    border-radius: 40px;
+    font-size: 16px;
+    color: yellowgreen;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px yellowgreen,
+        0 0 25px yellowgreen;
+}
+
+.learn-more:hover {
+    box-shadow: 0 0 25px yellowgreen,
+        0 0 25px yellowgreen;
+}
+
+/* Section: Skills */
+#skills h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#skills h1 span {
+    color: yellowgreen;
+}
+
+#skills-list {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+#skills-list div {
+    display: grid;
+    background: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+
+#skills-list i {
+    text-align: center;
+    font-size: 5rem;
+    color: yellowgreen;
+    animation: slideBottom 1s ease forwards;
+}
+
+#skills-list div h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+}
+
+#skills-list div p {
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+#skills-list div a {
+
+    width: 50%;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#skills-list div:hover {
+    transform: scale(1.1);
+}
+
+/* Section: Tech Stack */
+.tech {
+    width: 100%;
+}
+
+#tech h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#tech h1 span {
+    color: yellowgreen;
+}
+
+#tech-list {
+    display: flex;
+}
+
+#tech-list div {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    background: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+#tech-list div:hover{
+    transform: scale(1.1);
+}
+
+#tech-list div i {
+    color: yellowgreen;
+    font-size: 5rem;
+    transition: background 0.5s, transform 0.5s;
+}
+
+#tech-list div i:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+
+/* Section: Projects */
+#projects h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#projects h1 span {
+    color: yellowgreen;
+}
+
+#projects-list {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+#projects-list div {
+    display: grid;
+    background: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+
+#projects-list div h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+}
+
+#projects-list div p {
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+#projects-list div a {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+#projects-list div:hover {
+    transform: scale(1.1);
+}
+
+/* Section: Certifications */
+.certifications {
+    width: 100%;
+}
+
+#certifications h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    animation: slideRight 1s ease forwards;
+}
+
+#certifications h1 span {
+    color: yellowgreen;
+}
+
+#certifications-list {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+#certifications-list div {
+    display: grid;
+    background: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px yellowgreen,
+        1px 1px 40px yellowgreen;
+}
+
+#certifications-list i {
+    text-align: center;
+    font-size: 5rem;
+    color: yellowgreen;
+    animation: slideBottom 1s ease forwards;
+}
+
+#certifications-list div h2 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+}
+
+#certifications-list div p {
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+#certifications-list div a {
+    width: 50%;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#certifications-list div:hover {
+    transform: scale(1.1);
+}
+
+/* Section: Contact */
+.contact {
+    width: 100%;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+    animation: slideRight 1s ease forwards;
+}
+
+#contact span {
+    color: yellowgreen;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#form input {
+    outline: none;
+    color: #000;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+#form textarea {
+    outline: none;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 50%;
+}
+
+::placeholder {
+    font-weight: 150;
+    color: yellowgreen;
+}
+
+#form .captcha-container {
+    text-align: center;
+}
+
+#form #submit {
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 550;
+    background-color: yellowgreen;
+    color: #081B29;
+    box-shadow: 0 0 5px yellowgreen,
+        0 0 25px yellowgreen;
+    animation: slideTop 1s ease forwards;
+}
+
+#form #submit:hover {
+    cursor: pointer;
+    box-shadow: 0 0 25px yellowgreen, 0 0 25px yellowgreen;
+}
+
+/* Footer */
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 4%;
+    width: 100%;
+    color: #000;
+    background: yellowgreen ;  font-weight: 300;
+}
+
+#go-to-top {
+    bottom: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#go-to-top i {
+    color: #000;
+    background-color: yellowgreen;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10rem;
+
+}
+
+#go-to-top i:hover {
+    cursor: pointer;
+}
+
+/* KeyFrames */
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width:3116px) and (max-width:3835px){
+    #header{
+        height: 10%;
+    }
+    #logo{
+        padding-left: 30px;
+        font-size: 40px;
+    }
+    #navbar a{
+        font-size: 40px;
+    }
+    #home {
+        height: auto;
+        padding: 110px 5%;
+        padding-bottom: 0;
+
+    }
+
+
+    #home img {
+        width: 25%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 56%;
+        padding-left: 5%;
+    }
+    #home-content h3{
+        font-size: 300%;
+    }
+    #home h1{
+        font-size: 500%;
+    }
+    #home-content p{
+        font-size: 250%;
+    }
+    #home-icons{
+        height: 150px;
+    }
+    #home-icons a{
+        font-size: 40px;
+        height: 85px;
+        width: 85px;
+    }
+    .btn-box{
+        font-size: 27px;
+        width: 24%;
+        text-align: center;
+        font-weight: 900px;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 500%;
+
+    }
+    #about p{
+        font-size: 250%;
+
+    }
+
+    #about img {
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+    .container{
+        padding: 70px;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+    #qualifications h1{
+        font-size: 500%;
+    }
+    #qualifications-list div h2{
+        padding: 15px;
+        font-size: 400%;
+    }
+    #qualifications-list div h4{
+        padding: 10px;
+        font-size: 300%;
+    }
+    #skills h1{
+        font-size: 500%;
+    }
+    #skills-list i{
+        font-size: 10rem;
+    }
+    #skills-list div h2{
+        font-size: 300%;
+    }
+    #skills-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #tech h1{
+        font-size: 500%;
+    }
+    #tech-list div i{
+        font-size: 8rem;
+    }
+    #projects h1{
+        font-size: 500%;
+    }
+
+    #projects-list div h1{
+        font-size: 250%;
+    }
+    #projects-list div h2{
+        font-size: 400%;
+        padding: 15px;
+    }
+    #projects-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications h1{
+        font-size: 500%;
+    }
+    #certifications-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications-list div h1{
+        font-size: 250%;
+    }
+    #certifications-list div h2{
+        font-size: 300%;
+        padding: 15px;
+    }
+    #certifications-list i{
+        font-size: 9rem;
+    }
+    #qualifications-list div p{
+        font-size: 250%;
+    }
+    #skills-list div p{
+        font-size: 250%;
+    }
+    #projects-list div p{
+        font-size: 250%;
+    }
+    #certifications-list div p{
+        font-size: 250%;
+    }
+    #contact h2{
+        font-size: 500%
+    }
+    form input,  form #submit{
+        height: 50px;
+        font-size: 25px;
+
+    }
+    form textarea{
+        height: 250px;
+        font-size: 25px;
+    }
+    #form #submit{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 500%;
+    }
+    #footer{
+        height: 100px;
+        font-size: 25px;
+    }
+    #go-to-top i{
+        font-size: 30px;
+    }
+    
+}
+@media only screen and (min-width:2334px) and (max-width:3116px){
+    #header{
+        height: 10%;
+    }
+    #logo{
+        padding-left: 30px;
+        font-size: 40px;
+    }
+    #navbar a{
+        font-size: 40px;
+    }
+    #home {
+        height: auto;
+        padding: 110px 5%;
+        padding-bottom: 0;
+
+    }
+
+
+    #home img {
+        width: 40%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 50%;
+        padding-left: 5%;
+    }
+    #home-content h3{
+        font-size: 300%;
+    }
+    #home h1{
+        font-size: 500%;
+    }
+    #home-content p{
+        font-size: 250%;
+    }
+    #home-icons{
+        height: 150px;
+    }
+    #home-icons a{
+        font-size: 40px;
+        height: 85px;
+        width: 85px;
+    }
+    .btn-box{
+        font-size: 27px;
+        width: 24%;
+        text-align: center;
+        font-weight: 900px;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 500%;
+
+    }
+    #about p{
+        font-size: 250%;
+
+    }
+
+    #about img {
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+    .container{
+        padding: 70px;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+    #qualifications h1{
+        font-size: 500%;
+    }
+    #qualifications-list div h2{
+        padding: 15px;
+        font-size: 400%;
+    }
+    #qualifications-list div h4{
+        padding: 10px;
+        font-size: 300%;
+    }
+    #skills h1{
+        font-size: 500%;
+    }
+    #skills-list i{
+        font-size: 10rem;
+    }
+    #skills-list div h2{
+        font-size: 300%;
+    }
+    #skills-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #tech h1{
+        font-size: 500%;
+    }
+    #tech-list div i{
+        font-size: 8rem;
+    }
+    #projects h1{
+        font-size: 500%;
+    }
+
+    #projects-list div h1{
+        font-size: 250%;
+    }
+    #projects-list div h2{
+        font-size: 400%;
+        padding: 15px;
+    }
+    #projects-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications h1{
+        font-size: 500%;
+    }
+    #certifications-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications-list div h1{
+        font-size: 250%;
+    }
+    #certifications-list div h2{
+        font-size: 300%;
+        padding: 15px;
+    }
+    #certifications-list i{
+        font-size: 9rem;
+    }
+    #qualifications-list div p{
+        font-size: 250%;
+    }
+    #skills-list div p{
+        font-size: 250%;
+    }
+    #projects-list div p{
+        font-size: 250%;
+    }
+    #certifications-list div p{
+        font-size: 250%;
+    }
+    #contact h2{
+        font-size: 500%
+    }
+    form input,  form #submit{
+        height: 50px;
+        font-size: 25px;
+
+    }
+    form textarea{
+        height: 250px;
+        font-size: 25px;
+    }
+    #form #submit{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 500%;
+    }
+    #footer{
+        height: 100px;
+        font-size: 25px;
+    }
+    #go-to-top i{
+        font-size: 30px;
+    }
+    
+}
+@media only screen and (min-width:1840px) and (max-width:2334px) {
+    #header{
+        height: 10%;
+    }
+    #logo{
+        font-size: 40px;
+    }
+    #navbar a{
+        font-size: 40px;
+    }
+    #home {
+        height: auto;
+        padding: 140px 5%;
+        padding-bottom: 0;
+
+    }
+
+
+    #home img {
+        width: 40%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 50%;
+        padding-left: 5%;
+    }
+    #home-content h3{
+        font-size: 300%;
+    }
+    #home h1{
+        font-size: 500%;
+    }
+    #home-content p{
+        font-size: 250%;
+    }
+    #home-icons{
+        height: 150px;
+    }
+    #home-icons a{
+        font-size: 40px;
+        height: 85px;
+        width: 85px;
+    }
+    .btn-box{
+        font-size: 27px;
+        width: 32%;
+        text-align: center;
+        font-weight: 900px;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 500%;
+
+    }
+    #about p{
+        font-size: 250%;
+
+    }
+
+    #about img {
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+    #qualifications h1{
+        font-size: 500%;
+    }
+    #qualifications-list div h2{
+        padding: 15px;
+        font-size: 400%;
+    }
+    #qualifications-list div h4{
+        padding: 10px;
+        font-size: 300%;
+    }
+    #skills h1{
+        font-size: 500%;
+    }
+    #skills-list i{
+        font-size: 10rem;
+    }
+    #skills-list div h2{
+        font-size: 300%;
+    }
+    #skills-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #tech h1{
+        font-size: 500%;
+    }
+    #tech-list div i{
+        font-size: 8rem;
+    }
+    #projects h1{
+        font-size: 500%;
+    }
+
+    #projects-list div h1{
+        font-size: 250%;
+    }
+    #projects-list div h2{
+        font-size: 400%;
+        padding: 15px;
+    }
+    #projects-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications h1{
+        font-size: 500%;
+    }
+    #certifications-list div a{
+        width: 40%;
+        font-size: 25px;
+    }
+    #certifications-list div h1{
+        font-size: 250%;
+    }
+    #certifications-list div h2{
+        font-size: 300%;
+        padding: 15px;
+    }
+    #certifications-list i{
+        font-size: 9rem;
+    }
+    #qualifications-list div p{
+        font-size: 250%;
+    }
+    #skills-list div p{
+        font-size: 250%;
+    }
+    #projects-list div p{
+        font-size: 250%;
+    }
+    #certifications-list div p{
+        font-size: 250%;
+    }
+    #contact h2{
+        font-size: 500%
+    }
+    form input,  form #submit{
+        height: 50px;
+        font-size: 25px;
+
+    }
+    form textarea{
+        height: 250px;
+        font-size: 25px;
+    }
+    #form #submit{
+        font-size: 25px;
+    }
+    h1{
+        font-size: 500%;
+    }
+    .container{
+        padding: 70px;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+    #footer{
+        height: 100px;
+        font-size: 25px;
+    }
+    #go-to-top i{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 1520px) and (max-width:1840px) {
+    #home {
+        height: auto;
+        padding: 140px 5%;
+        padding-bottom: 0;
+
+    }
+
+    #home img {
+        width: 45%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 50%;
+    }
+    
+
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+
+    #about img {
+        margin: 0;
+        width: 90%;
+        height: auto;
+    }
+    .container{
+        padding: 70px;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+
+}
+@media only screen and (min-width: 1375px) and (max-width:1520px){
+    #home{
+        height: 60vh;
+    }
+   
+}
+
+@media only screen and (max-width: 1375px) {
+    #home {
+        height: 180vh;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #home img {
+        height: auto;
+        margin: auto;
+        width: 80%;
+        display: flex;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    #about-img img {
+        height: auto;
+        margin: auto;
+        width: 60%;
+        display: flex;
+    }
+
+    #about-text h2,
+    #about-text p {
+        text-align: center;
+        margin: 0;
+        padding: 10px 20px;
+    }
+}
+@media only screen and (min-width:1080px) and (max-width: 1375px) {
+    #home {
+        height: auto;
+        padding: 60px 5%;
+        padding-bottom: 0;
+
+    }
+
+    #home img {
+        padding-top: 35px;
+        width: 35%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 80%;
+    }
+
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+
+    #about img {
+        width: 35%;
+        height: auto;
+    }
+    .container{
+        padding: 70px;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+}
+@media only screen and (min-width:872px) and (max-width: 1080px) {
+    #home {
+        height: auto;
+        padding: 60px 5%;
+        padding-bottom: 0;
+
+    }
+
+    #home img {
+        width: 43%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content {
+        max-width: 800px;
+    }
+
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+
+    #about img {
+        width: 43%;
+        height: auto;
+    }
+    
+    .responsive {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 872px) {
+    .container {
+        padding: 70px 50px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.5rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 45px;
+    }
+    #logo {
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: yellowgreen;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 2%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 50%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 3.5rem;
+    }
+    #home-content h3{
+        font-size: 2.5rem;
+    }
+    #home-content p{
+        font-size: 1.5rem;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 50%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 3rem;
+    }
+    #about-text p{
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    .btn-box{
+        font-size: 12px;
+}   }
+@media only screen and (min-width: 662px) and (max-width: 768px) {
+    .container {
+        padding: 70px 55px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.8rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 50px;
+    }
+    #header {
+        padding: 0;
+    }
+    #logo {
+        font-size: 32px;
+        padding-left: 20px;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #home {
+        height: auto;
+        padding: 60px 7%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 45%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 3rem;
+    }
+    #home-content h3{
+        font-size: 2rem;
+    }
+    #home-content p{
+        font-size: 1.1rem;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 45%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 3rem;
+    }
+    #about-text p{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+    .btn-box{
+        font-size: 11px;
+    }
+    #form .input_text,
+    #form textarea,
+    #form #submit {
+        width: 100%;
+}   }
+@media only screen and (min-width: 576px) and (max-width: 662px) {
+    .container {
+        padding: 70px 50px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 50px;
+    }
+    #logo {
+        font-size: 27px;
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        font-size: 2.8rem;
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 5%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 45px;
+    }
+    #home-content h3{
+        font-size: 1.8rem;
+    }
+    #home-content p{
+        font-size: 1.1rem;
+    }
+    .btn-box{
+        font-size: 12px;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 45px;
+    }
+    #about-text p{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    .responsive {
+        padding: 0 5%;
+    }
+    #contact h2{
+        margin-bottom: 25px;
+    }
+    #form input,
+    #form textarea{
+        width: 98%;
+    }
+    #footer p{
+        font-size: 13px;
+}   }
+@media only screen and (min-width: 534px) and (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 70px 74px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 40px;
+    }
+    #logo {
+        font-size: 27px;
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        font-size: 2.7rem;
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 8%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 47px;
+    }
+    #home-content p{
+        font-size: 1.1rem;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 42px;
+    }
+    #about-text p{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    .btn-box{
+        font-size: 11px;
+    }
+    .responsive {
+        padding: 0 2%;
+    }
+    #contact h2{
+        margin-bottom: 25px;
+    }
+    #form input,
+    #form textarea{
+        width: 98%;
+    }
+    #footer p{
+        font-size: 13px;
+}   }
+@media only screen and (min-width: 478px) and (max-width: 534px) {
+    .container {
+        width: 100vw;
+        padding: 70px 74px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 40px;
+    }
+    #logo {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        font-size: 2.6rem;
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 7%;
+        padding-bottom: 0;
+    }
+    #home-content h1{
+        font-size: 47px;
+    }
+    #home-content p{
+        font-size: 1.1rem;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 42px;
+    }
+    #about-text p{
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+    .btn-box{
+        font-size: 11px;
+    }
+    .responsive {
+        width: 100%;
+    }
+    #contact h2{
+        margin-bottom: 25px;
+    }
+    #form input,
+    #form textarea{
+        width: 98%;
+    }
+    #footer p{
+        font-size: 13px;
+}   }
+@media only screen and (min-width: 400px) and (max-width: 478px) {
+    .container {
+        width: 100vw;
+        padding: 50px 50px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 40px;
+    }
+    #logo {
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        font-size: 2.6rem;
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 9%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 45px;
+    }
+    #home-content h3{
+        font-size: 1.8rem;
+    }
+    #home-content p{
+        font-size: 1rem;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about h2{
+        font-size: 40px;
+    }
+    #about-text p{
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .btn-box{
+        font-size: 12px;
+    }
+    .responsive {
+        width: 100%;
+    }
+    #contact h2{
+        margin-bottom: 25px;
+    }
+    #form input,
+    #form textarea{
+        width: 98%;
+    }
+    #footer p{
+        font-size: 13px;
+}   }
+@media only screen and (min-width: 360px) and (max-width: 400px) {
+    .container {
+        width: 105vw;
+        padding: 35px 40px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 40px;
+    }
+    #logo {
+        font-size: 25px;
+        padding-left: 15px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        font-size: 2.6rem;
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    .responsive {
+        width: 100vw;
+    }
+    #home {
+        height: auto;
+        padding: 60px 7%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 42px;
+    }
+    #home-content h3{
+        font-size: 30px;
+    }
+    #home-content p{
+        font-size: 1.1rem;
+    }
+    #about {
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 40px;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about-text p{
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+    .btn-box{
+        font-size: 11px;
+    }
+    #contact h2{
+        margin-bottom: 25px;
+    }
+    #form input,
+    #form textarea{
+        width: 98%;
+    }
+    #footer {
+        font-size: 14px;
+        width: 105vw;
+    }
+    #go-to-top i{
+        font-size: 16px;
+}   }
+@media only screen and (min-width:240px) and (max-width: 360px) {
+    .container {
+        width: 162vw;
+        padding: 35px 45px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    #qualifications p,
+    #skills p,
+    #tech p,
+    #projects p,
+    #certifications p,
+    #contact p{
+        font-size: 0.4rem;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 50px;
+    }
+    #logo {
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        width: 164vw;
+        height: auto;
+        padding: 60px 12%;
+        padding-bottom: 0;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 52px;
+    }
+    #about {
+        width: 164vw;
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 50px;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about-text p{
+        text-align: justify;
+    }
+    #contact h2{
+        margin-bottom: 30px;
+    }
+    #form input,
+    #form textarea{
+        width: 75%;
+    }
+    #footer {
+        width: 164vw;
+}   }
+@media only screen and (min-width:216px) and (max-width: 240px){
+    .container {
+        width: 178vw;
+        padding: 35px 45px;
+        padding-right: 40px;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 50px;
+    }
+    #logo {
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 10%;
+        padding-bottom: 0;
+        width: 180vw;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 52px;
+    }
+    #about {
+        width: 180vw;
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 50px;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about-text p{
+        text-align: justify;
+    }
+    #form input,
+    #form textarea{
+        width: 95%;
+    }
+    #footer {
+        width: 180vw;
+}   }
+@media only screen and (max-width:216px){
+    .container {
+        width: 188vw;
+        padding: 35px 45px;
+        padding-right: 30px;
+    }
+    #qualifications h1,
+    #skills h1,
+    #tech h1,
+    #projects h1,
+    #certifications h1,
+    #contact h2{
+        font-size: 50px;
+    }
+    #logo {
+        padding-left: 20px;
+    }
+    #header {
+        padding: 0;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    #navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid yellowgreen;
+        box-shadow: .5rem 0 1rem yellowgreen;
+        display: none;
+    }
+    #home {
+        height: auto;
+        padding: 60px 8%;
+        padding-bottom: 0;
+        width: 190vw;
+    }
+    #home img {
+        width: 70%;
+        height: auto;
+        margin: 0;
+    }
+    #home-content h1{
+        font-size: 50px;
+    }
+    #about {
+        width: 190vw;
+        height: auto;
+        gap: 0;
+        padding: 0 5%;
+    }
+    #about h2{
+        font-size: 50px;
+    }
+    #about img {
+        width: 70%;
+        height: auto;
+    }
+    #about-text p{
+        text-align: justify;
+    }
+    .btn-box{
+        font-size: 11px;
+    }
+    #contact h2{
+        margin: 20px;
+    }
+    #form input,
+    #form textarea{
+        width: 90%;
+    }
+    #footer {
+        width: 190vw;
+}   }
+/* End of Program */
