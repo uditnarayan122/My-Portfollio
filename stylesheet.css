@@ -2363,3 +2363,20 @@ body.dark-mode {
         width: 190vw;
 }   }
 /* End of Program */
+/* Your existing CSS code for general styles */
+
+/* Add the responsive media query styles at the end */
+@media (min-width: 1024px) {
+    /* Styles for large screens (desktops/laptops) */
+    /* Example: Home section display flex */
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    /* Styles for tablets */
+    /* Example: Home section display block */
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile phones */
+    /* Example: Navbar changes to column layout */
+}
